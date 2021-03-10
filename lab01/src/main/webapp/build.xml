@@ -1,0 +1,22 @@
+<project name="lab01" default="copy" >
+
+    <target name="init">
+        <echo message="lab01" />
+    </target>
+
+    <target name="create" depends ="init">
+        <delete dir= "C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
+        <mkdir dir= "C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
+        <mkdir dir= "C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\WEB-INF\" />
+        <mkdir dir= "C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\images\" />
+    </target>
+
+    <target name="copy" depends ="create">
+        <copy file= "C:\3k2s\Programming on the Internet\lab01\src\main\webapp\WEB-INF\web.xml" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\WEB-INF\" />
+        <copy file= "C:\3k2s\Programming on the Internet\lab01\src\main\webapp\index.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
+        <copy file= "C:\3k2s\Programming on the Internet\lab01\src\main\webapp\address.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
+        <copy file= "C:\3k2s\Programming on the Internet\lab01\src\main\webapp\education.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
+        <copy file= "C:\3k2s\Programming on the Internet\lab01\src\main\webapp\images\java-logo.jpg" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\images\" />
+    </target>
+
+</project>
