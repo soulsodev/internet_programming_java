@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<style>
+    html,
+    body {
+        background-color: #e6e6fa;
+        height: 100%
+    }
+
+    .w-25 {
+        margin: 25px;
+    }
+
+    .my_label {
+        font-weight: bold;
+        font-size: 1.325rem;
+    }
+</style>
+
+<div class="h-100 w-25 row">
+    <div class="col">
+        <label class="my_label">Enter your full name:</label>
+        <form action="Sss" method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="background-color: red">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
