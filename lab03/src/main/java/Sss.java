@@ -43,7 +43,7 @@ public class Sss extends HttpServlet implements Servlet {
         }
 
         if (task.equals("4")) {
-           resp.sendRedirect(req.getContextPath() + "/Ggg?task=" + req.getParameter("task"));
+            resp.sendRedirect(req.getContextPath() + "/Ggg?task=" + req.getParameter("task"));
         }
 
     }
@@ -71,7 +71,9 @@ public class Sss extends HttpServlet implements Servlet {
 
         //Redirect
         if (task.equals("2.2")) {
-            resp.sendRedirect(req.getContextPath() + "/Ggg?task=" + req.getParameter("task"));
+            resp.setStatus(307);
+            resp.setHeader("Location", req.getContextPath() + "/Ggg?task=" + req.getParameter("task"));
+            System.out.println(HttpServletResponse.SC_TEMPORARY_REDIRECT);
         }
 
         //Forward
