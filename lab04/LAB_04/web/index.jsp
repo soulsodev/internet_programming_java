@@ -43,8 +43,8 @@
   }
 
     private int getPageByHour(int hourNow) {
-    //hourNow = hourNow + 6;
-    System.out.println("howerNow:" + hourNow);
+    hourNow = hourNow + 8;
+    System.out.println("hourNow:" + hourNow);
     if (hourNow >= 0 && hourNow <= 4) {
       return 0;
     }
@@ -110,7 +110,6 @@
 
     <p>
       <br>
-      <b>Task %include%</b>
         <%int caseToUse = getPageByHour(dateHelper.getHours());
           switch(caseToUse) {
           case 0:
@@ -122,17 +121,18 @@
           break;
         case 1:
       %>
-      <%@include file="morning.jsp"%>
-<%--      <jsp:include page="morning.jsp"></jsp:include>--%>
-<%--      <jsp:forward page="morning.jsp"></jsp:forward>--%>
+      <%--<%@include file="morning.jsp"%>--%>
+     <jsp:include page="morning.jsp"/>
+      <%--<jsp:forward page="morning.jsp"/>--%>
       <%
           break;
         case 2:
       %>
-       <%@include file="afternoon.jsp"%>
+      <%@include file="afternoon.jsp"%>
 <%--      <jsp:include page="afternoon.jsp"/>--%>
 <%--      <jsp:forward page="afternoon.jsp"/>--%>
-<%--      <jsp:include page="/AfternoonServlet"/>--%>
+      <%--<jsp:include page="/AfternoonServlet"/>--%>
+
       <%
           break;
         case 3:

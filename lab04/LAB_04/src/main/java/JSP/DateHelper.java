@@ -30,18 +30,14 @@ public class DateHelper {
 
     public int getDay() {
         return this.date.getDayOfMonth();
-        //return this.mCalendar.get(5);
-
     }
 
     public int getMonth() {
         return this.date.getMonthValue();
-        //return this.mCalendar.get(2);
     }
 
     public int getYear() {
         return this.date.getYear();
-        //return this.mCalendar.get(1);
     }
 
     public String getDayByDate(int day, int month, int year) throws ParseException {
@@ -52,17 +48,5 @@ public class DateHelper {
         String dayOfWeek = new SimpleDateFormat("EEEE", Locale.ENGLISH).format(date);
 
         return dayOfWeek; // Friday
-
-//        String template = String.format("%d-%d-%d", day, month, year);
-//        Date date = null;
-//
-//        try {
-//            date = (new SimpleDateFormat("d-M-yyyy")).parse(template);
-//        } catch (ParseException var7) {
-//            var7.printStackTrace();
-//        }
-//
-//        String formatedDate = (new SimpleDateFormat("EEEE", Locale.ENGLISH)).format(date);
-//        return formatedDate;
     }
 }

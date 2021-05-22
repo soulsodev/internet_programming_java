@@ -2,6 +2,8 @@
 import java.net.URI;
 import java.net.http.HttpClient;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,9 +16,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import static javax.swing.UIManager.put;
-
 
 @WebServlet(name = "Jjj", urlPatterns = "/Jjj")
 public class Jjj extends HttpServlet {
@@ -34,6 +33,32 @@ public class Jjj extends HttpServlet {
         return message;
     }
 
+    // TASK 12
+//    @Override
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.set(Calendar.HOUR_OF_DAY, calendar.get(Calendar.HOUR_OF_DAY));
+//        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+//        String greeting = getDayTime(hour);
+//        String pageJSP = greeting + ".jsp";
+//
+//        HttpClient client = HttpClient.newHttpClient();
+//        HttpRequest request1 = HttpRequest.newBuilder()
+//                .uri(URI.create("http://localhost:8081/LAB_04_war_exploded/" + pageJSP))
+//                .build();
+//
+//        try {
+//            HttpResponse<String> response1 = client.send(request1, HttpResponse.BodyHandlers.ofString());
+//            System.out.println(response1.body());
+//            response.getWriter().write(response1.body());
+//
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+    // TASK 11
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -43,19 +68,9 @@ public class Jjj extends HttpServlet {
         String greeting = getDayTime(hour);
         String pageJSP = greeting + ".jsp";
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request1 = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8081/LAB_04_war_exploded/" + pageJSP))
-                .build();
-
-        try {
-            HttpResponse<String> response1 = client.send(request1, HttpResponse.BodyHandlers.ofString());
-            System.out.println(response1.body());
-            response.getWriter().write(response1.body());
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        ServletContext servletContext = getServletContext();
+        RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/" + pageJSP);
+        requestDispatcher.forward(request, response);
     }
 
     @Override
