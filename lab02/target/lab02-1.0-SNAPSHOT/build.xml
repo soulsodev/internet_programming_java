@@ -1,0 +1,34 @@
+<project name="lab02" default = "copy" >
+
+    <target name="init">
+        <echo message="Building project lab02..." />
+        <property name="server" value="C:\Program Files\Apache Software Foundation\Tomcat 10.0" />
+        <property name="work" value="C:\3k2s\Internet-Programming\lab02\src\main\webapp" />
+    </target>
+
+    <target name="compile" depends ="init">
+        <delete verbose ="true">
+            <fileset dir="C:\3k2s\Internet-Programming\lab02\target\classes"/>
+        </delete>
+
+        <javac target="1.8" srcdir = "C:\3k2s\Internet-Programming\lab02\src"
+               destdir = "C:\3k2s\Internet-Programming\lab02\target\classes"
+               classpath = "${server}\lib\servlet-api.jar" />
+    </target>
+
+    <target name="create" depends ="compile">
+        <delete dir="${server}\webapps\lab02\" />
+        <mkdir dir= "${server}\webapps\lab02\" />
+        <mkdir dir= "${server}\webapps\lab02\WEB-INF" />
+    </target>
+
+    <target name="copy" depends ="create">
+        <copy file= "${work}\WEB-INF\web.xml"
+              todir="${server}\webapps\lab02\WEB-INF\" />
+        <copy file= "${work}\index.html"
+              todir="${server}\webapps\lab02\" />
+        <copy todir="${server}\webapps\lab02\WEB-INF\classes">
+            <fileset dir="C:\3k2s\Internet-Programming\lab02\target\classes"/>
+        </copy>
+    </target>
+</project>

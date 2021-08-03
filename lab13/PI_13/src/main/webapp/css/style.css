@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1 {
+  font-family: Arial, sans-serif;
+  color: #424242;
+}
+
+.subTitle {
+  color: #424242;
+}
+
+.links {
+  display: flex;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #424242;
+  margin: 0 10px;
+}
+
+a:visited, a:active {
+  color: #424242;
+}
+
+a:hover {
+  color: #7c7c7c;
+}
+
+form {
+  display: inline-block;
+}
+
+.btn_link {
+  background: transparent;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  border: none;
+  color: #424242;
+  padding: 0;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.5s all
+}
+
+.btn_link:hover {
+  color: #7c7c7c;
+}
+
+img {
+  height: 300px;
+}
+
+
+.form_container {
+  margin-top: 20px;
+}
+
+
+.form_container form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2px 0;
+  align-items: baseline;
+}
+
+form label {
+  color: #424242;
+  margin-right: 7px;
+}
+
+form p {
+  color: #424242;
+}
+
+.timeTable {
+  color: #424242;
+  font-size: 18px;
+  border: 1px solid #424242;
+  margin: 10px 0;
+}
+
+.timeTable tr {
+  padding: 7px 5px;
+}
+
+.alt_container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  background-color: #424242;
+}
+
+.form fieldset {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #7c7c7c;
+  padding: 5px 15px;
+}
+
+.form_header {
+  color: #c2c0c0;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+.form .row {
+  margin-bottom: 5px;
+}
+
+.form .row_rad {
+  justify-content: space-around;
+}
+
+.form .input_field {
+  font-size: 14px;
+  padding: 2px 5px;
+  background: #424242;
+  border: none;
+  border-bottom: 1px solid #828080;
+  color: #7c7c7c;
+  transition: 0.5s all
+}
+
+.form .input_field:focus {
+  border-bottom: 1px solid #424242;
+  color: #424242;
+}
+
+p, span {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: #c2c0c0;
+}
+
+span {
+  color:#424242;
+}
+
+form {
+  margin-top: 20px;
+}

@@ -12,11 +12,11 @@
     </target>
 
     <target name="copy" depends ="create">
-        <copy file= "C:\3k2s\Internet-Programming\lab01\src\main\webapp\WEB-INF\web.xml" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\WEB-INF\" />
-        <copy file= "C:\3k2s\Internet-Programming\lab01\src\main\webapp\index.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
-        <copy file= "C:\3k2s\Internet-Programming\lab01\src\main\webapp\address.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
-        <copy file= "C:\3k2s\Internet-Programming\lab01\src\main\webapp\education.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
-        <copy file= "C:\3k2s\Internet-Programming\lab01\src\main\webapp\images\java-logo.jpg" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\images\" />
+        <copy file= "D:\6sem\Internet-Programming\lab01\src\main\webapp\WEB-INF\web.xml" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\WEB-INF\" />
+        <copy file= "D:\6sem\Internet-Programming\lab01\src\main\webapp\index.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
+        <copy file= "D:\6sem\Internet-Programming\lab01\src\main\webapp\address.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
+        <copy file= "D:\6sem\Internet-Programming\lab01\src\main\webapp\education.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\" />
+        <copy file= "D:\6sem\Internet-Programming\lab01\src\main\webapp\images\java-logo.jpg" todir="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\lab01\images\" />
     </target>
 
 </project>
